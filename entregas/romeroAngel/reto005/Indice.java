@@ -1,4 +1,5 @@
-package v000;
+package entregas.romeroAngel.reto005;
+
 public class Indice {
     private String[] valores;
     private int[][] posiciones;

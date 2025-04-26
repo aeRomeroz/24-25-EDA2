@@ -1,11 +1,13 @@
-package v000;
+package entregas.romeroAngel.reto005;
+
 public class Cliente {
     public static void main(String[] args) {
         GestorCSV gestor = new GestorCSV(100, 4);
 
         cargarDatos(gestor);
 
-//        gestor.imprimirDatos();
+
+        gestor.imprimirDatos();
 
 //        System.out.println("> ESTUDIANTES DE PROGRAMACIÓN 2");
 //        imprimirDataset(gestor.buscarPorIndice("Asignatura", "Programación 2"));
