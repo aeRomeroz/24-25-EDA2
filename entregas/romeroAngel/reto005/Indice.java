@@ -1,10 +1,10 @@
 package entregas.romeroAngel.reto005;
 
-public class Indice {
-    private String[] valores;
-    private int[][] posiciones;
-    private int[] contadores;
-    private int cantidadValores;
+public abstract class Indice {
+    protected String[] valores;
+    protected int[][] posiciones;
+    protected int[] contadores;
+    protected int cantidadValores;
 
     public Indice(int capacidadMaxima) {
         valores = new String[capacidadMaxima];
@@ -13,26 +13,7 @@ public class Indice {
         cantidadValores = 0;
     }
 
-    public void agregar(String valor, int posicion) {
-        int indiceValor = -1;
-        int i = 0;
-
-        while (i < cantidadValores && indiceValor == -1) {
-            if (valores[i].equals(valor)) {
-                indiceValor = i;
-            }
-            i++;
-        }
-
-        if (indiceValor == -1) {
-            valores[cantidadValores] = valor;
-            indiceValor = cantidadValores;
-            cantidadValores++;
-        }
-
-        posiciones[indiceValor][contadores[indiceValor]] = posicion;
-        contadores[indiceValor]++;
-    }
+    public abstract void agregar(String valor, int posicion);
 
     public int[] buscar(String valor) {
         int indiceValor = -1;
